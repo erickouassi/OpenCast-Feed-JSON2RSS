@@ -11,7 +11,7 @@
       "name": "Podcast Creator",
       "email": "creator@example.com"
     },
-    "image": "https://example.com/podcast-cover.jpg",
+    "image": "https://yourdomain.com/images/podcast-cover.jpg",
     "category": {
       "main": "Education",
       "sub": "Self-Improvement"
@@ -19,12 +19,15 @@
     "explicit": false,
     "type": "episodic",
     "copyright": "© 2026 Podcast Creator",
-    "lastBuildDate": "Thu, 26 Feb 2026 09:00:00 -0500"
+    "lastBuildDate": "Thu, 26 Feb 2026 09:00:00 -0500",
+    "podcastGuid": "opencast-show-guid-001",
+    "locked": "yes"
   },
 
   "episodes": [
     {
       "title": "Welcome to OpenCast",
+      "link": "https://example.com/episodes/welcome",
       "description": "<p>This introductory episode explains how the OpenCast Feed Engine works, why it was created, and how you can use it to publish your own podcast with full control and zero platform lock-in.</p>",
       "audioUrl": "https://example.com/audio/episode1.mp3",
       "audioLength": 4321987,
@@ -39,11 +42,16 @@
       "episode": 1,
       "season": 1,
       "episodeType": "full",
-      "image": "https://example.com/episode1.jpg"
+      "image": "https://example.com/episode1.jpg",
+      "transcript": {
+        "url": "https://example.com/transcripts/episode1.txt",
+        "type": "text/plain"
+      }
     },
 
     {
       "title": "Structuring Your Podcast in JSON",
+      "link": "https://example.com/episodes/json-structure",
       "description": "<p>This episode walks through the JSON structure used by OpenCast, including channel metadata, episode fields, artwork, and publication settings.</p>",
       "audioUrl": "https://example.com/audio/episode2.mp3",
       "audioLength": 3987654,
@@ -58,11 +66,16 @@
       "episode": 2,
       "season": 1,
       "episodeType": "full",
-      "image": "https://example.com/episode2.jpg"
+      "image": "https://example.com/episode2.jpg",
+      "transcript": {
+        "url": "https://example.com/transcripts/episode2.txt",
+        "type": "text/plain"
+      }
     },
 
     {
       "title": "Behind the Scenes: Serverless RSS Generation",
+      "link": "https://example.com/episodes/serverless",
       "description": "<p>In this bonus episode, we explore how the serverless function transforms JSON into a fully valid RSS feed, and how this approach keeps your workflow simple and scalable.</p>",
       "audioUrl": "https://example.com/audio/bonus1.mp3",
       "audioLength": 2987654,
@@ -77,7 +90,11 @@
       "episode": 3,
       "season": 1,
       "episodeType": "bonus",
-      "image": "https://example.com/bonus1.jpg"
+      "image": "https://example.com/bonus1.jpg",
+      "transcript": {
+        "url": "https://example.com/transcripts/bonus1.txt",
+        "type": "text/plain"
+      }
     }
   ]
 }
