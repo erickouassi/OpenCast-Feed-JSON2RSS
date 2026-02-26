@@ -7,7 +7,8 @@ export default function handler(req, res) {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-     xmlns:atom="http://www.w3.org/2005/Atom">
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:podcast="https://podcastindex.org/namespace/1.0">
 
   <channel>
 
@@ -17,6 +18,7 @@ export default function handler(req, res) {
     <description><![CDATA[${channel.description}]]></description>
 
     <atom:link href="${channel.feedUrl}" rel="self" type="application/rss+xml" />
+
     <itunes:author>${channel.author}</itunes:author>
     <itunes:summary>${channel.summary}</itunes:summary>
 
@@ -33,6 +35,10 @@ export default function handler(req, res) {
 
     <itunes:explicit>${channel.explicit}</itunes:explicit>
     <itunes:type>${channel.type}</itunes:type>
+
+    <podcast:locked>${channel.locked}</podcast:locked>
+    <podcast:guid>${channel.podcastGuid}</podcast:guid>
+
     <copyright>${channel.copyright}</copyright>
     <lastBuildDate>${channel.lastBuildDate}</lastBuildDate>
 
@@ -41,6 +47,7 @@ export default function handler(req, res) {
         (ep) => `
     <item>
       <title>${ep.title}</title>
+      <link>${ep.link}</link>
       <description><![CDATA[${ep.description}]]></description>
 
       <enclosure 
@@ -63,6 +70,8 @@ export default function handler(req, res) {
       <itunes:episodeType>${ep.episodeType}</itunes:episodeType>
 
       <itunes:image href="${ep.image}" />
+
+      <podcast:transcript url="${ep.transcript.url}" type="${ep.transcript.type}" />
     </item>
     `
       )
