@@ -1,0 +1,83 @@
+{
+  "channel": {
+    "title": "OpenCast Feed Engine",
+    "link": "https://example.com",
+    "language": "en-us",
+    "description": "OpenCast Feed Engine is a lightweight, JSON-driven podcast publishing system that gives creators full control over their RSS feed. Define your show and episodes in a single JSON file, deploy through any modern workflow, and instantly generate a standards-compliant RSS feed for Apple Podcasts, Spotify, and all major podcast apps.",
+    "feedUrl": "https://yourdomain.com/api/rss",
+    "author": "Podcast Creator",
+    "summary": "A flexible, creator-friendly podcast feed system powered by JSON and serverless functions.",
+    "owner": {
+      "name": "Podcast Creator",
+      "email": "creator@example.com"
+    },
+    "image": "https://example.com/podcast-cover.jpg",
+    "category": {
+      "main": "Education",
+      "sub": "Self-Improvement"
+    },
+    "explicit": false,
+    "type": "episodic",
+    "copyright": "© 2026 Podcast Creator",
+    "lastBuildDate": "Thu, 26 Feb 2026 09:00:00 -0500"
+  },
+
+  "episodes": [
+    {
+      "title": "Welcome to OpenCast",
+      "description": "<p>This introductory episode explains how the OpenCast Feed Engine works, why it was created, and how you can use it to publish your own podcast with full control and zero platform lock-in.</p>",
+      "audioUrl": "https://example.com/audio/episode1.mp3",
+      "audioLength": 4321987,
+      "audioType": "audio/mpeg",
+      "guid": "opencast-episode-001",
+      "pubDate": "Mon, 01 Jan 2024 10:00:00 -0500",
+      "author": "Podcast Creator",
+      "subtitle": "A quick introduction to the project",
+      "summary": "Learn what OpenCast is and how it empowers creators.",
+      "duration": "1800",
+      "explicit": false,
+      "episode": 1,
+      "season": 1,
+      "episodeType": "full",
+      "image": "https://example.com/episode1.jpg"
+    },
+
+    {
+      "title": "Structuring Your Podcast in JSON",
+      "description": "<p>This episode walks through the JSON structure used by OpenCast, including channel metadata, episode fields, artwork, and publication settings.</p>",
+      "audioUrl": "https://example.com/audio/episode2.mp3",
+      "audioLength": 3987654,
+      "audioType": "audio/mpeg",
+      "guid": "opencast-episode-002",
+      "pubDate": "Mon, 08 Jan 2024 10:00:00 -0500",
+      "author": "Podcast Creator",
+      "subtitle": "Understanding the JSON schema",
+      "summary": "A practical guide to organizing your podcast data.",
+      "duration": "2100",
+      "explicit": false,
+      "episode": 2,
+      "season": 1,
+      "episodeType": "full",
+      "image": "https://example.com/episode2.jpg"
+    },
+
+    {
+      "title": "Behind the Scenes: Serverless RSS Generation",
+      "description": "<p>In this bonus episode, we explore how the serverless function transforms JSON into a fully valid RSS feed, and how this approach keeps your workflow simple and scalable.</p>",
+      "audioUrl": "https://example.com/audio/bonus1.mp3",
+      "audioLength": 2987654,
+      "audioType": "audio/mpeg",
+      "guid": "opencast-episode-bonus-001",
+      "pubDate": "Fri, 12 Jan 2024 10:00:00 -0500",
+      "author": "Podcast Creator",
+      "subtitle": "A look at the engine under the hood",
+      "summary": "How JSON becomes XML through a serverless function.",
+      "duration": "1200",
+      "explicit": false,
+      "episode": 3,
+      "season": 1,
+      "episodeType": "bonus",
+      "image": "https://example.com/bonus1.jpg"
+    }
+  ]
+}
