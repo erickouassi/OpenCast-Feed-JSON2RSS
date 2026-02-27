@@ -6,10 +6,9 @@ export default function handler(req, res) {
     endpoints: {
       rss: "/api/rss",
       apiRoot: "/api",
-      health: "/api/health"
+      health: "/api/health",
+      docs: "/docs"
     },
-    docs: "https://open-cast-feed-json-2-rss.vercel.app//docs",
-    author: "Eric Kouassi",
-    message: "Welcome to the OpenCast Feed Engine root endpoint."
+    author: "Eric Kouassi"
   });
 }
